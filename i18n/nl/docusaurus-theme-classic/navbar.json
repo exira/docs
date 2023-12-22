@@ -1,0 +1,10 @@
+{
+  "title": {
+    "message": "exira.com",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "exira.com",
+    "description": "The alt text of navbar logo"
+  }
+}

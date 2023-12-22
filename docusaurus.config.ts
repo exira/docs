@@ -23,24 +23,40 @@ const config: Config = {
     locales: ['en', 'nl'],
   },
 
-  presets: [
+  themes: [
     [
-      'classic',
+      '@docusaurus/theme-classic',
       {
-        docs: {
-          sidebarPath: './sidebars.ts',
-          editUrl:
-            'https://github.com/exira/docs/',
-        },
-        theme: {
-          customCss: './src/css/custom.css',
-        },
-      } satisfies Preset.Options,
+        customCss: './custom.css',
+      }
+    ]
+  ],
+
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        path: 'docs',
+        routeBasePath: '/',
+        sidebarPath: './sidebars.ts',
+      },
     ],
+    '@docusaurus/plugin-sitemap',
   ],
 
   themeConfig: {
     image: 'img/social-card.png',
+
+    metadata: [
+      {name: 'keywords', content: 'domain, domainname, domain name, domainnames, domain names'},
+    ],
+
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
+
     navbar: {
       title: 'exira.com',
       logo: {
@@ -48,19 +64,21 @@ const config: Config = {
         src: 'img/exira-symbol.svg',
       },
       items: [
-        // {
-        //   type: 'docSidebar',
-        //   sidebarId: 'tutorialSidebar',
-        //   position: 'left',
-        //   label: 'Tutorial',
-        // },
-        // {
-        //   href: 'https://github.com/exira/docs',
-        //   label: 'GitHub',
-        //   position: 'right',
-        // },
+        {
+          type: 'localeDropdown',
+          position: 'right',
+        },
       ],
+      hideOnScroll: true,
     },
+
+    docs: {
+      sidebar: {
+        hideable: false,
+        autoCollapseCategories: false,
+      },
+    },
+
     footer: {
       style: 'dark',
       // links: [
@@ -84,12 +102,14 @@ const config: Config = {
       //     ],
       //   },
       // ],
-      copyright: `Copyright © ${new Date().getFullYear()} exira.com.`,
+      copyright: `© 2020-${new Date().getFullYear()} · exira.com vof · BE0759.397.459 · All rights reserved`,
     },
+
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+
   } satisfies Preset.ThemeConfig,
 };
 
