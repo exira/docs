@@ -4,6 +4,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'exira.com',
+  titleDelimiter: '·',
+
   tagline: (() => {
     switch (process.env.DOCUSAURUS_CURRENT_LOCALE) {
       case 'nl':
