@@ -7,9 +7,9 @@ const config: Config = {
   tagline: (() => {
     switch (process.env.DOCUSAURUS_CURRENT_LOCALE) {
       case 'nl':
-        return 'Vind jouw plaats in het digitale landschap';
+        return 'Vind de perfecte domeinnaam';
       default:
-        return 'Find your place in the digital landscape';
+        return 'Find the perfect domainname';
     }
   })(),
   favicon: 'img/favicon.ico',
