@@ -4,7 +4,14 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'exira.com',
-  tagline: '',
+  tagline: (() => {
+    switch (process.env.DOCUSAURUS_CURRENT_LOCALE) {
+      case 'nl':
+        return 'Vind jouw plaats in het digitale landschap';
+      default:
+        return 'Find your place in the digital landscape';
+    }
+  })(),
   favicon: 'img/favicon.ico',
 
   url: 'https://help.exira.com',
@@ -54,7 +61,7 @@ const config: Config = {
     colorMode: {
       defaultMode: 'dark',
       disableSwitch: false,
-      respectPrefersColorScheme: true,
+      respectPrefersColorScheme: false,
     },
 
     navbar: {
@@ -81,28 +88,14 @@ const config: Config = {
 
     footer: {
       style: 'dark',
-      // links: [
-      //   {
-      //     title: 'Docs',
-      //     items: [
-      //       {
-      //         label: 'Tutorial',
-      //         to: '/docs/intro',
-      //       },
-      //     ],
-      //   },
-
-      //   {
-      //     title: 'More',
-      //     items: [
-      //        {
-      //         label: 'GitHub',
-      //         href: 'https://github.com/exira/docs',
-      //       },
-      //     ],
-      //   },
-      // ],
-      copyright: `© 2020-${new Date().getFullYear()} · exira.com vof · BE0759.397.459 · All rights reserved`,
+      copyright: (() => {
+        switch (process.env.DOCUSAURUS_CURRENT_LOCALE) {
+          case 'nl':
+            return `© 2020-${new Date().getFullYear()} &middot; exira.com vof &middot; BE0759.397.459 &middot; Alle rechten voorbehouden`;
+          default:
+            return `© 2020-${new Date().getFullYear()} &middot; exira.com vof &middot; BE0759.397.459 &middot; All rights reserved`;
+        }
+      })(),
     },
 
     prism: {

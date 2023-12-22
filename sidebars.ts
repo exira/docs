@@ -6,7 +6,14 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       collapsed: false,
-      label: 'Register',
+      label: (() => {
+        switch (process.env.DOCUSAURUS_CURRENT_LOCALE) {
+          case 'nl':
+            return 'Registreren';
+          default:
+            return 'Register';
+        }
+      })(),
       items: [
         'register/check-availability',
         'register/order-domainname',
@@ -15,11 +22,25 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       collapsed: false,
-      label: 'Manage',
+      label: (() => {
+        switch (process.env.DOCUSAURUS_CURRENT_LOCALE) {
+          case 'nl':
+            return 'Beheren';
+          default:
+            return 'Manage';
+        }
+      })(),
       items: [
         {
           type: 'category',
-          label: '🛠 Records beheren',
+          label: (() => {
+            switch (process.env.DOCUSAURUS_CURRENT_LOCALE) {
+              case 'nl':
+                return '🛠 Records beheren';
+              default:
+                return '🛠 Manage records';
+            }
+          })(),
           link: {
             type: 'doc',
             id: 'manage/manage-records',
