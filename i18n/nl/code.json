@@ -229,5 +229,33 @@
   "theme.unlistedContent.message": {
     "message": "This page is unlisted. Search engines will not index it, and only users having a direct link can access it.",
     "description": "The unlisted content banner message"
+  },
+  "theme.SearchBar.label": {
+    "message": "Zoeken",
+    "description": "Search button label"
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Bekijk alle resultaten",
+    "description": "The link to see all search results"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "Geen resultaten",
+    "description": "Label to indicate there are no results"
+  },
+  "theme.SearchPage.existingResultsTitle": {
+    "message": "Zoekresultaten voor \"{query}\"",
+    "description": "Title of search results page"
+  },
+  "theme.SearchPage.emptyResultsTitle": {
+    "message": "Zoeken",
+    "description": "Title of search results page"
+  },
+  "theme.SearchPage.documentsFound.plurals": {
+    "message": "1 resultaat gevonden|{count} resultaten gevonden",
+    "description": "Paragraph on search results page"
+  },
+  "theme.SearchPage.noResultsText": {
+    "message": "Er zijn geen resultaten gevonden",
+    "description": "Paragraph on search results page"
   }
 }

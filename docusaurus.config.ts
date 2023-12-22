@@ -35,8 +35,22 @@ const config: Config = {
       '@docusaurus/theme-classic',
       {
         customCss: './custom.css',
-      }
-    ]
+      },
+    ],
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        indexDocs: true,
+        indexBlog: false,
+        indexPages: false,
+        docsRouteBasePath: '/',
+        docsDir: 'docs',
+        searchBarShortcutHint: false,
+        searchBarPosition: 'right',
+        hashed: true,
+        language: ['en', 'nl'],
+      },
+    ],
   ],
 
   plugins: [
