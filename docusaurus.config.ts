@@ -27,6 +27,75 @@ const config: Config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {
+        type: 'text/plain',
+        rel: 'author',
+        href: 'https://exira.com/humans.txt',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        type: 'image/png',
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: 'https://exira.com/favicons/apple-touch-icon.png',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        type: 'image/png',
+        rel: 'icon',
+        sizes: '32x32',
+        href: 'https://exira.com/favicons/favicon-32x32.png',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        type: 'image/png',
+        rel: 'icon',
+        sizes: '192x192',
+        href: 'https://exira.com/favicons/android-chrome-192x192.png',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        type: 'image/png',
+        rel: 'icon',
+        sizes: '16x16',
+        href: 'https://exira.com/favicons/favicon-16x16.png',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'manifest',
+        href: 'https://exira.com/favicons/site.webmanifest',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'mask-icon',
+        href: 'https://exira.com/favicons/safari-pinned-tab.svg',
+        color: '#130046'
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'shortcut icon',
+        href: 'https://exira.com/favicons/favicon.ico'
+      },
+    },
+  ],
+
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'nl'],
